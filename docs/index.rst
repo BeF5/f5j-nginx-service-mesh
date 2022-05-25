@@ -12,24 +12,17 @@ F5 Labs - Index
 座学資料
 ========
 
-このラボはNGINX Plus Ingress Controller のインストールから各種設定を行っていただけます。
+このラボはNGINX Service Meshのインストールから各種設定を行っていただけます。
 
-NGINX Plusの基本的な動作や仕様について紹介しております。
+NGINX Service Meshの基本的な動作や仕様について紹介しております。
 
 | 基本的な解説資料は以下を参照してください。
 | (ラボの実施内容と異なりますが、参考資料としてご利用いただけます)
 
-セミナー資料
------
-以下の資料を参考にご覧いただけます。一部内容を変更してラボの内容としております
-
-- `これから始めるNGINX基本セミナー～Ingress Controller編 <https://www.slideshare.net/Nginx/nginx-back-to-basics-ingress-controller-japanese-webinar>`__
-- `ThinkIT:NGINX Ingress Controllerの柔軟なアプリケーション制御、具体的なユースケースと設定方法を理解する <https://thinkit.co.jp/article/18771>`__
-
 Webinar(プレゼンテーション・デモ)
 -----
 
-`これから始めるNGINX基本セミナー～Ingress Controller編 <https://www.nginx.co.jp/resources/webinars/nginx-back-to-basic-ingress-controller-jp/>`__
+- `サービスメッシュはなぜ必要？NGINX Service Mesh 技術解説セミナー <https://www.nginx.co.jp/resources/webinars/service-mesh/>`__
 
 
 
