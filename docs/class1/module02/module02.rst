@@ -1,4 +1,4 @@
-NGINX Ingress Controller(NIC) 環境のセットアップ
+dNGINX Ingress Controller(NIC) 環境のセットアップ
 ####
 
 
