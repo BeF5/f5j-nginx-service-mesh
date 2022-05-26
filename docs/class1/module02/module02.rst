@@ -1,7 +1,7 @@
-NGINX Ingress Controller(NIC) 環境のセットアップ
+NGINX Service Mesh(NSM)のセットアップ
 ####
 
-1. NGINX Service Mesh(NSM)のセットアップ
+1. NSMのセットアップ
 ====
 
 | まず初めに、事前準備を行います。Lab環境ではPersistent Volumeを作成します。
