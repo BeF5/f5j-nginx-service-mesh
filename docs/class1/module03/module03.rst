@@ -277,7 +277,7 @@ Chromeで ``http://bookinfo.example.com/`` へ接続してください
 
 サンプルアプリケーションをデプロイし、NSMを使った通信が行われていることが確認できました。
 
-NSMによるサービス間のRateLimit
+サービス間のRateLimit
 ####
 
 設定内容の確認
