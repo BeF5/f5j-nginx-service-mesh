@@ -4,8 +4,8 @@ NGINX Ingress Controller(NIC) 環境のセットアップ
 1. NGINX Service Mesh(NSM)のセットアップ
 ====
 
-まず初めに、事前準備を行います。Lab環境ではPersistent Volumeを作成します。
-参考： `Prepare Kubeadm <https://docs.nginx.com/nginx-service-mesh/get-started/kubernetes-platform/kubeadm/>`__
+| まず初めに、事前準備を行います。Lab環境ではPersistent Volumeを作成します。
+| 参考： `Prepare Kubeadm <https://docs.nginx.com/nginx-service-mesh/get-started/kubernetes-platform/kubeadm/>`__
 
 必要なファイルを取得します。
 
@@ -14,6 +14,8 @@ NGINX Ingress Controller(NIC) 環境のセットアップ
   cd ~/
   git clone https://github.com/BeF5/f5j-nsm-lab.git
   cd ~/f5j-nsm-lab/prep
+
+StorageClass を確認します。
 
 .. code-block:: cmdin
   
@@ -79,7 +81,7 @@ Lab環境ではすでにファイルをダウンロードしていますので�
   sudo mv nginx-meshctl_linux /usr/local/bin/nginx-meshctl
   sudo chmod +x /usr/local/bin/nginx-meshctl
 
-CLIのVersionを確認
+CLIのVersionを確認します。
 
 .. code-block:: cmdin
   
@@ -160,7 +162,7 @@ NGINX Service Mesh で NGINX Ingress Controller(NIC)を利用するため、
 .. code-block:: yaml
   :linenos:
   :caption: nginx-plus-ingress-sm.yaml
-  :emphasize-lines: 5-12,17,33-35,48,52-62
+  :emphasize-lines: 5-12,17,23-25,38,42-52
 
     ** 省略 **
      metadata:
@@ -271,7 +273,7 @@ NodePortをデプロイします。
 .. code-block:: yaml
   :linenos:
   :caption: nginx-plus-ingress-sm2.yaml
-  :emphasize-lines: 4,10,14,16-18,23,33
+  :emphasize-lines: 4,10,14,16-18,23,37
 
   apiVersion: apps/v1
   kind: Deployment
@@ -311,6 +313,7 @@ NodePortをデプロイします。
             #- -enable-prometheus-metrics
             - -ingress-class=nginx2                          # Ingress Classを nginx2 と指定します
 
+NIC(nginx-ingress2)をデプロイします。
 
 .. code-block:: cmdin
 
@@ -322,6 +325,8 @@ NodePortをデプロイします。
   :caption: 実行結果サンプル
 
   deployment.apps/nginx-ingress2 created
+
+ステータスを確認します。
 
 .. code-block:: cmdin
 
@@ -336,18 +341,18 @@ NodePortをデプロイします。
   nginx-ingress-8558f76867-xsqmz        1/1     Running   0          18m
   nginx-ingress2-5966f7c78d-hj9d2       1/1     Running   0          5s
 
+NodePortをデプロイします。
+
 .. code-block:: cmdin
 
   # cd ~/f5j-nsm-lab/prep/
   kubectl apply -f nodeport2.yaml
-
 
 .. code-block:: bash
   :linenos:
   :caption: 実行結果サンプル
 
   service/nginx-ingress2 created
-
 
 NodePortの情報を確認します
 
@@ -362,12 +367,11 @@ NodePortの情報を確認します
   nginx-ingress            NodePort    10.108.4.145     <none>        80:31727/TCP,443:31592/TCP   18m
   nginx-ingress2           NodePort    10.101.208.219   <none>        80:31441/TCP,443:32278/TCP   25s
 
-
-NGINXの設定を作成します。
+それぞれに表示されているポート番号を確認してください。これらの情報を元に、NGINXの設定を作成します。
 
 .. code-block:: cmdin
 
-  # cd ~/f5j-nsm-lab/prep/
+  ## cd ~/f5j-nsm-lab/prep/
   vi nginx.conf
 
 以下の内容を参考に、先程確認したNoder Portで割り当てられたポート番号宛に通信を転送するように、NGINXを設定します。
@@ -375,7 +379,7 @@ NGINXの設定を作成します。
 .. code-block:: yaml
   :linenos:
   :caption: nginx-plus-ingress-sm2.yaml
-  :emphasize-lines: 5,13,14,20,21
+  :emphasize-lines: 7,11,18,22
 
   # TCP/UDP load balancing
   #

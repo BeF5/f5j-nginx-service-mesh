@@ -370,13 +370,6 @@ Chrome で ``http://bookinfo.example.com/productpage`` にアクセスし、更�
    .. image:: ./media/bookinfo-ratelimit1.jpg
       :width: 400
 
-.. code-block:: bash
-  :linenos:
-  :caption: ブラウザ出力結果
-
-  Error fetching product reviews!
-  Sorry, product reviews are currently unavailable for this book.
-
 RateLimitにより、productpageというアプリケーションが内部で別のサービスにアクセスする通信量を制御出来ることが確認できました。
 
 
@@ -510,8 +503,8 @@ RateLimitのポリシーを削除します。
 
 この様に条件を指定することで、対象の通信を識別し制限の対象とする通信を限定することが可能です
 
-ステータスの確認
-====
+NSMによる通信ステータスの確認
+####
 
 ブラウザで Jaeger にアクセスし、更新ボタンを教えてください
 いくつかの通信が発生したことにより、対象となるサービスが複数に増えていることが確認できます
