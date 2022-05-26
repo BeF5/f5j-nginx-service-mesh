@@ -268,11 +268,25 @@ NodePortをデプロイします。
 このラボでは、外部からNSMがデプロイした各リソースにアクセス出来るようにするため、NICを複数デプロイします。
 複数のNICに必要な設定を行います
 
-コメントを付与した行が適切な内容であることを確認してください。
+Ingress Classを作成します。
+
+.. code-block:: cmdin
+  
+  cd ~/f5j-nsm-lab/prep
+  kubectl apply -f ingress-class2.yaml
+
+.. code-block:: bash
+  :linenos:
+  :caption: 実行結果サンプル
+
+  ingressclass.networking.k8s.io/nginx2 created
+
+
+Deploymentを確認します。コメントを付与した行が適切な内容であることを確認してください。
 
 .. code-block:: yaml
   :linenos:
-  :caption: nginx-plus-ingress-sm2.yaml
+  :caption: nginx-plus-ingress-sm2.yaml (cd ~/f5j-nsm-lab/prep 配下のファイル)
   :emphasize-lines: 4,10,14,16-18,23,37
 
   apiVersion: apps/v1
@@ -317,7 +331,7 @@ NIC(nginx-ingress2)をデプロイします。
 
 .. code-block:: cmdin
 
-  # cd ~/f5j-nsm-lab/example
+  ## cd ~/f5j-nsm-lab/prep
   kubectl apply -f nginx-plus-ingress-sm2.yaml
 
 .. code-block:: bash
