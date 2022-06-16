@@ -66,8 +66,8 @@ NSMテスト用のNamespaceを作成します
   namespace/staging created
   namespace/legacy created
 
-以下の手順に従ってNGINX Ingress Controllerのイメージを作成します
-参考： `Install NGINX Service Mesh using nginx-meshctl <https://docs.nginx.com/nginx-service-mesh/get-started/install/>`__
+| 以下の手順に従ってNGINX Ingress Controllerのイメージを作成します
+| 参考： `Install NGINX Service Mesh using nginx-meshctl <https://docs.nginx.com/nginx-service-mesh/get-started/install/>`__
 
 NSM Install に利用する ``nginx-meshctl`` を Install します。
 Lab環境ではすでにファイルをダウンロードしていますのでそちらを展開します。
