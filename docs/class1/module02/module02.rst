@@ -1,7 +1,7 @@
 NGINX Service Mesh(NSM)のセットアップ
 ####
 
-1. NSMのセットアップ
+0. 事前準備
 ====
 
 | まず初めに、事前準備を行います。Lab環境ではPersistent Volumeを作成します。
@@ -99,6 +99,9 @@ CLIのVersionを確認します。
   - Your kubectl config file "/home/ubuntu/.kube/config" is valid
   - Your Kubernetes context is set to a valid and running cluster, see "kubectl config get-contexts"
   Error message: not found
+
+1. NSMのセットアップ
+====
 
 NSMをInstallします。
 
