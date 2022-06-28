@@ -15,42 +15,6 @@ NGINX Service Mesh(NSM)のセットアップ
   git clone https://github.com/BeF5/f5j-nsm-lab.git
   cd ~/f5j-nsm-lab/prep
 
-StorageClass を確認します。
-
-.. code-block:: cmdin
-  
-  kubectl get storageclass
-
-.. code-block:: bash
-  :linenos:
-  :caption: 実行結果サンプル
-
-  No resources found
-
-リソースを作成します。
-
-.. code-block:: cmdin
-  
-  # cd ~/f5j-nsm-lab/prep
-  kubectl apply -f sc-local.yaml
-
-.. code-block:: bash
-  :linenos:
-  :caption: 実行結果サンプル
-
-  storageclass.storage.k8s.io/local-storage created
-
-.. code-block:: cmdin
-  
-  kubectl get storageclass
-
-.. code-block:: bash
-  :linenos:
-  :caption: 実行結果サンプル
-
-  NAME            PROVISIONER                    RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-  local-storage   kubernetes.io/no-provisioner   Delete          WaitForFirstConsumer   false                  15s
-
 NSMテスト用のNamespaceを作成します
 
 .. code-block:: cmdin
