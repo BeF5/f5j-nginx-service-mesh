@@ -359,7 +359,7 @@ NodePortの情報を確認します
 
 .. code-block:: yaml
   :linenos:
-  :caption: nginx-plus-ingress-sm2.yaml
+  :caption: nginx.conf
   :emphasize-lines: 7,11,18,22
 
   # TCP/UDP load balancing
