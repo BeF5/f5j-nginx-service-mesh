@@ -355,7 +355,7 @@ NodePortの情報を確認します
   ## cd ~/f5j-nsm-lab/prep/
   vi nginx.conf
 
-以下の内容を参考に、先程確認したNoder Portで割り当てられたポート番号宛に通信を転送するように、NGINXを設定します。
+以下の内容を参考に、先程確認したNodePortで割り当てられたポート番号宛に通信を転送するように、NGINXを設定します。
 
 .. code-block:: yaml
   :linenos:
