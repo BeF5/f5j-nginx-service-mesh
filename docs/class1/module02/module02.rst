@@ -4,8 +4,15 @@ NGINX Service Mesh(NSM)のセットアップ
 0. 事前準備
 ====
 
-| まず初めに、事前準備を行います。Lab環境ではPersistent Volumeを作成します。
-| 参考： `Prepare Kubeadm <https://docs.nginx.com/nginx-service-mesh/get-started/kubernetes-platform/kubeadm/>`__
+このセットアップで以下のような環境をデプロイします
+
+   .. image:: ./media/nsm-structure.jpg
+      :width: 400
+
+- Namespace ``nginx-ingress`` にNIC、 ``nginx-mesh`` にNSMのコンポーネントをデプロイします
+- NSMのSidecarを挿入する対象のNamespaceとして ``prod`` 、 ``staging`` 、 ``legacy`` をデプロイします
+- NSMの管理コンポーネントに接続するために ``nginx-ingress2`` というNICをデプロイします
+- NSMのSidecarを挿入するアプリケーションに接続するために ``nginx-ingress`` というNICをデプロイします
 
 必要なファイルを取得します。
 
