@@ -7,7 +7,7 @@ NGINX Service Mesh(NSM)のセットアップ
 このセットアップで以下のような環境をデプロイします
 
    .. image:: ./media/nsm-structure.jpg
-      :width: 400
+      :width: 600
 
 - Namespace ``nginx-ingress`` にNIC、 ``nginx-mesh`` にNSMのコンポーネントをデプロイします
 - NSMのSidecarを挿入する対象のNamespaceとして ``prod`` 、 ``staging`` 、 ``legacy`` をデプロイします
