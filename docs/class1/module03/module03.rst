@@ -12,7 +12,6 @@ NSM サンプルアプリケーションのデプロイ
    .. image:: ./media/nsm-structure2.jpg
       :width: 600
 
-サンプルアプリケーションをデプロイします。
 
 ここではbookinfoというアプリケーションをデプロイし、NSMの基本的な動作を確認します。
 予め作成した ``staging`` というNamespaceを指定します。
