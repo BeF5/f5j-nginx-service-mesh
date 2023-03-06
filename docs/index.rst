@@ -26,6 +26,14 @@ Webinar(プレゼンテーション・デモ)
 
 
 
+NGINX セットアップガイド トップページ
+====
+
+NGINX のその他ラボガイドは以下を参照してください
+
+- `NGINX セットアップガイド・ラボガイド <https://f5j-tech-info.readthedocs.io/ja/latest/content03/content3.html>`__
+
+
 .. toctree::
    :maxdepth: 3
    :caption: Lab Contents:
